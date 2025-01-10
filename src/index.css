@@ -1,0 +1,78 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --primary: 215 100% 50%;
+    --primary-focus: 215 100% 45%;
+    --primary-content: 0 0% 100%;
+
+    --secondary: 280 100% 50%;
+    --secondary-focus: 280 100% 45%;
+    --secondary-content: 0 0% 100%;
+
+    --accent: 35 100% 50%;
+    --accent-focus: 35 100% 45%;
+    --accent-content: 0 0% 100%;
+
+    --neutral: 220 10% 50%;
+    --neutral-focus: 220 10% 45%;
+    --neutral-content: 0 0% 100%;
+
+    --base-100: 0 0% 100%;
+    --base-200: 0 0% 95%;
+    --base-300: 0 0% 90%;
+    --base-content: 220 10% 10%;
+
+    --info: 200 100% 50%;
+    --success: 120 100% 40%;
+    --warning: 40 100% 50%;
+    --error: 0 100% 50%;
+  }
+
+  .dark {
+    --primary: 215 100% 60%;
+    --primary-focus: 215 100% 65%;
+    --primary-content: 0 0% 100%;
+
+    --secondary: 280 100% 60%;
+    --secondary-focus: 280 100% 65%;
+    --secondary-content: 0 0% 100%;
+
+    --accent: 35 100% 60%;
+    --accent-focus: 35 100% 65%;
+    --accent-content: 0 0% 100%;
+
+    --neutral: 220 10% 60%;
+    --neutral-focus: 220 10% 65%;
+    --neutral-content: 0 0% 100%;
+
+    --base-100: 220 10% 20%;
+    --base-200: 220 10% 15%;
+    --base-300: 220 10% 10%;
+    --base-content: 0 0% 100%;
+
+    --info: 200 100% 60%;
+    --success: 120 100% 50%;
+    --warning: 40 100% 60%;
+    --error: 0 100% 60%;
+  }
+}
+
+@layer components {
+  .sidebar {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      @apply fixed inset-y-0 left-0 z-50 w-64 transform -translate-x-full;
+    }
+
+    .sidebar.open {
+      @apply translate-x-0;
+    }
+  }
+}
+
